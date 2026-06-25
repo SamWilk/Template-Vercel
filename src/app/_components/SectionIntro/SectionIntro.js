@@ -1,4 +1,4 @@
-import styles from "./shared.module.css";
+import styles from "./SectionIntro.module.css";
 
 export default function SectionIntro({ eyebrow, title }) {
   return (

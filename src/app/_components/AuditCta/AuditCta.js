@@ -1,4 +1,4 @@
-import styles from "./shared.module.css";
+import styles from "./AuditCta.module.css";
 
 export default function AuditCta() {
   return (
@@ -11,7 +11,7 @@ export default function AuditCta() {
           conversion improvements that would matter most.
         </p>
       </div>
-      <a className={styles.primaryButton} href="mailto:hello@example.com?subject=Website%20audit%20request">
+      <a className={styles.primaryButton} href="mailto:samwilk1898@gmail.com?subject=Website%20audit%20request">
         Request an audit
       </a>
     </section>

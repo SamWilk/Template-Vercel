@@ -7,7 +7,8 @@
 .headerWrap,
 .hero,
 .section,
-.signalSection {
+.signalSection,
+.socialWrap {
   width: min(1180px, calc(100% - 48px));
   margin: 0 auto;
 }
@@ -118,6 +119,10 @@
   background: #132018;
 }
 
+.socialWrap {
+  margin-bottom: 92px;
+}
+
 .signalSection h2 {
   color: #ffffff;
   font-size: clamp(2rem, 4vw, 3.2rem);
@@ -162,10 +167,13 @@
 
 @media (max-width: 900px) {
   .hero,
-  .cardGrid,
   .signalSection,
   .signalGrid {
     grid-template-columns: 1fr;
+  }
+
+  .cardGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .searchCard {
@@ -181,24 +189,76 @@
   .headerWrap,
   .hero,
   .section,
-  .signalSection {
+  .signalSection,
+  .socialWrap {
     width: min(100% - 36px, 1180px);
   }
 
   .hero {
-    padding: 56px 0 48px;
+    gap: 28px;
+    padding: 48px 0 42px;
   }
 
   .hero h1 {
-    font-size: 3.1rem;
+    font-size: clamp(2.45rem, 14vw, 3.15rem);
+    line-height: 0.98;
+  }
+
+  .hero p:not(.eyebrow),
+  .signalSection p {
+    margin-top: 18px;
+    font-size: 1.02rem;
+  }
+
+  .searchCard {
+    padding: 22px;
+  }
+
+  .searchCard strong {
+    overflow-wrap: anywhere;
   }
 
   .section {
     padding-bottom: 64px;
   }
 
+  .cardGrid,
+  .signalGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-height: auto;
+    padding: 24px;
+  }
+
   .signalSection {
+    gap: 28px;
     margin-bottom: 64px;
-    padding: 28px;
+    padding: 26px;
+  }
+
+  .socialWrap {
+    margin-bottom: 64px;
+  }
+
+  .signalSection h2 {
+    font-size: clamp(2rem, 12vw, 2.7rem);
+  }
+}
+
+@media (max-width: 380px) {
+  .headerWrap,
+  .hero,
+  .section,
+  .signalSection,
+  .socialWrap {
+    width: min(100% - 28px, 1180px);
+  }
+
+  .card,
+  .searchCard,
+  .signalSection {
+    padding: 22px;
   }
 }

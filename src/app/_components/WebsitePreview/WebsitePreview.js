@@ -1,4 +1,4 @@
-import styles from "./shared.module.css";
+import styles from "./WebsitePreview.module.css";
 
 export default function WebsitePreview() {
   return (

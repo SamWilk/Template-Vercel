@@ -1,6 +1,7 @@
-import AuditCta from "../_components/AuditCta";
-import SectionIntro from "../_components/SectionIntro";
-import SiteHeader from "../_components/SiteHeader";
+import AuditCta from "../_components/AuditCta/AuditCta";
+import SectionIntro from "../_components/SectionIntro/SectionIntro";
+import SiteHeader from "../_components/SiteHeader/SiteHeader";
+import SocialHighlights from "../_components/SocialHighlights/SocialHighlights";
 import styles from "./local-seo-benefits.module.css";
 
 export const metadata = {
@@ -78,8 +79,9 @@ export default function LocalSeoBenefitsPage() {
           <p className={styles.eyebrow}>Local ranking signals</p>
           <h2>Build pages around services, locations, and proof.</h2>
           <p>
-            This gives you a strong client conversation: the site is not only prettier,
-            it is organized around the searches that produce calls and quote requests.
+            A stronger website is not only prettier. It is organized around the
+            searches, locations, reviews, and proof that help produce calls and quote
+            requests.
           </p>
         </div>
         <div className={styles.signalGrid}>
@@ -91,6 +93,10 @@ export default function LocalSeoBenefitsPage() {
           ))}
         </div>
       </section>
+
+      <div className={styles.socialWrap}>
+        <SocialHighlights />
+      </div>
 
       <AuditCta />
     </main>

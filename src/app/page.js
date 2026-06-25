@@ -1,9 +1,9 @@
 import Link from "next/link";
-import AuditCta from "./_components/AuditCta";
-import SectionIntro from "./_components/SectionIntro";
-import SiteHeader from "./_components/SiteHeader";
-import WebsitePreview from "./_components/WebsitePreview";
-import shared from "./_components/shared.module.css";
+import AuditCta from "./_components/AuditCta/AuditCta";
+import SectionIntro from "./_components/SectionIntro/SectionIntro";
+import SiteHeader from "./_components/SiteHeader/SiteHeader";
+import SocialHighlights from "./_components/SocialHighlights/SocialHighlights";
+import WebsitePreview from "./_components/WebsitePreview/WebsitePreview";
 import styles from "./page.module.css";
 
 const businessTypes = [
@@ -68,14 +68,14 @@ export default function Home() {
 
         <div className={styles.heroGrid} id="top">
           <div className={styles.heroContent}>
-            <p className={shared.eyebrow}>Jacksonville web design for service businesses</p>
+            <p className={styles.eyebrow}>Jacksonville web design for service businesses</p>
             <h1>Turn an outdated website into a faster lead machine.</h1>
             <p className={styles.heroText}>
               I build snappy, modern websites for local businesses that need more calls,
               quote requests, and trust from the first visit.
             </p>
             <div className={styles.heroActions}>
-              <a className={shared.primaryButton} href="#contact">
+              <a className={styles.primaryButton} href="#contact">
                 Get a website audit
               </a>
               <Link className={styles.secondaryButton} href="/website-benefits">
@@ -111,7 +111,7 @@ export default function Home() {
 
       <section className={styles.splitSection} id="seo">
         <div>
-          <p className={shared.eyebrow}>SEO that supports real business</p>
+          <p className={styles.eyebrow}>SEO that supports real business</p>
           <h2>Help local customers find the service they already need.</h2>
           <p>
             Jacksonville customers search with intent for pressure washing near me,
@@ -144,6 +144,10 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <div className={styles.socialWrap}>
+        <SocialHighlights />
+      </div>
 
       <AuditCta />
     </main>
